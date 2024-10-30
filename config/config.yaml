@@ -4,3 +4,9 @@ data_ingestion:
   root_dir: artifacts/data_ingestion
   source_url: rm1000/lung-cancer-histopathological-images
   unzip_dir: artifacts/data_ingestion/dataset
+
+base_model:
+  root_dir: artifacts/base_model
+  base_model_path: artifacts/base_model/base_model.keras
+  updated_model: artifacts/base_model/updated_model.keras
+  

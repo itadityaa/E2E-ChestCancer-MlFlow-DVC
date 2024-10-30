@@ -1,1 +1,33 @@
-key: val
+model:
+  name: "EfficientNetB0"  
+  input_shape: [224, 224, 3]  
+  num_classes: 3  # Number of classes (adenocarcinoma, benign, squamous_cell_carcinoma)
+
+data:
+  train_data_dir: "artifacts/data_ingestion/dataset"  
+  batch_size: 32  
+  image_size: [224, 224]  
+
+training:
+  weights: "imagenet"
+  include_top: false
+  epochs: 10  
+  learning_rate: 0.001  
+
+augmentation:
+  rotation_range: 20  
+  width_shift_range: 0.2  
+  height_shift_range: 0.2  
+  shear_range: 0.2  
+  zoom_range: 0.2  
+  horizontal_flip: true  
+  fill_mode: "nearest"  
+
+callbacks:
+  early_stopping:
+    monitor: "val_loss"  
+    patience: 5  
+  model_checkpoint:
+    filepath: "best_model.h5"  
+    monitor: "val_loss"  
+    save_best_only: true  

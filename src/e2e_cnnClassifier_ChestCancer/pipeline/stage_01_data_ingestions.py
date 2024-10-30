@@ -14,9 +14,9 @@ class DataIngestionTrainingPipeline:
     def main(self):
         """Executes the data ingestion process."""
         try:
-            logger.info(f">>>>>> {STAGE_NAME} started <<<<<<")
+            logger.info(f">>>>>> {STAGE_NAME} start <<<<<<")
             self.data_ingestion.download_dataset()
-            logger.info(f">>>>>> {STAGE_NAME} completed <<<<<<\n")
+            logger.info(f">>>>>> {STAGE_NAME} complete <<<<<<")
         except Exception as e:
             logger.exception(f"Error occurred in {STAGE_NAME}: {e}")
             raise e
