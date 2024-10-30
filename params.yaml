@@ -28,6 +28,6 @@ callbacks:
     monitor: "val_loss"  
     patience: 5  
   model_checkpoint:
-    filepath: "best_model.h5"  
+    filepath: "artifacts/training/best_model.keras"  
     monitor: "val_loss"  
     save_best_only: true  

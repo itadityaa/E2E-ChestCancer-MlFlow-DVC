@@ -9,4 +9,7 @@ base_model:
   root_dir: artifacts/base_model
   base_model_path: artifacts/base_model/base_model.keras
   updated_model: artifacts/base_model/updated_model.keras
-  
+
+model_training:
+  root_dir: artifacts/model_training
+  model_path: artifacts/model_training/model.keras  

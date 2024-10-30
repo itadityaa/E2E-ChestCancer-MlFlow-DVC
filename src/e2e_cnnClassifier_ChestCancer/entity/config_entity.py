@@ -7,8 +7,8 @@ class DataIngestionConfig:
     root_dir: Path
     source_URL: str
     unzip_dir: Path
-
-@dataclass
+    
+@dataclass(frozen=True)
 class BaseModelConfigAndParams:
     base_model_root_dir: str
     base_model_path: str
