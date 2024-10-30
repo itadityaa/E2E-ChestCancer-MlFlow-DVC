@@ -3,4 +3,4 @@ artificats_root: artifacts
 data_ingestion:
   root_dir: artifacts/data_ingestion
   source_url: rm1000/lung-cancer-histopathological-images
-  unzip_dir: D:/data-science/ML/CancerDetection/artifacts/dataset
+  unzip_dir: artifacts/data_ingestion/dataset
